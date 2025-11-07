@@ -38,7 +38,10 @@ Notebook : `Everflow-API-Analytics.ipynb`
 ### 2. [Chatbot RAG IA](https://github.com/Momo3972/chatbot-rag-ia-gen)
 > Assistant conversationnel intelligent relié à une base documentaire.
 - **Stack** : Python, LLM (LangChain / OpenAI), RAG, Gradio / Streamlit  
-- **Objectif** : permettre à un utilisateur d’interroger dynamiquement des documents PDF et d’obtenir des réponses contextuelles.  
+- **Objectif** : permettre à un utilisateur d’interroger dynamiquement des documents PDF et d’obtenir des réponses contextuelles 
+- **Méthodes utilisées** :
+ - Conception d’une chaîne RAG complète (indexation, embeddings, retrieval et génération)
+- Intégration d’API IA et création d’une interface Web interactive (Gradio / Streamlit)
 - **Livrables** :
   - Application Web interactive  
   - Chaîne RAG complète (embedding + retrieval + génération)  
@@ -49,13 +52,12 @@ Notebook : `Everflow-API-Analytics.ipynb`
 ### 3. [Détection de fraude bancaire](https://github.com/Momo3972/projet-fraude)
 > Analyse et modélisation de transactions bancaires pour identifier des signaux faibles de fraude.
 - **Stack** : Python, Pandas, NumPy, Scikit-learn, XGBoost  
-- **Objectif** : améliorer le **rappel** sans dégrader la **précision** sur classes rares.  
+- **Objectif** : améliorer le **rappel** sans dégrader la **précision** sur classes rares  
 - **Méthodes utilisées** :
-  - Préparation des données (EDA, nettoyage, encodage)
+  - Nettoyage, préparation et analyse des données (EDA, catégorielle et temporelle)
   - Gestion du déséquilibre via **SMOTE**
-  - Réduction dimensionnelle (**PCA**)
-  - Comparaison de modèles : *Logistic Regression*, *Random Forest*, *XGBoost*
-- **Résultat** : amélioration du score **F1** et meilleure détection de fraudes rares.  
+  - Entraînement et optimisation de modèles : Régression logistique, Random Forest, XGBoost ; évaluation avec F1-score, AUC-ROC, précision-rappel
+- **Résultat** : amélioration du score **F1** et meilleure détection de fraudes rares  
 
 ---
 
@@ -75,9 +77,9 @@ Notebook : `Everflow-API-Analytics.ipynb`
 
 ## Formation & Certifications
 
-- **Mastère Spécialisé – Expert Big Data Engineer**, UTT Paris (2024–2025)  
-- **Certificat Concepteur Développeur en Data Science**, Jedha (2024)  
-- **Lean Six Sigma Black Belt**, Cubic Partners (2019)  
+- **Mastère Spécialisé - Expert Big Data Engineer**, UTT Paris (2024–2025)  
+- **Certificat Concepteur Développeur en Data Science**, Jedha Paris (2024)  
+- **Lean Six Sigma Black Belt**, Cubic Partners Paris (2019)  
 - **Master QSE**, EISTI Cergy (2017)  
 - **Master Géosciences**, Université Paris-Saclay (2014)
 
