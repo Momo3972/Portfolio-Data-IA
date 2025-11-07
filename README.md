@@ -1,42 +1,41 @@
 # Mohamed Lamine OULD BOUYA  
-**Data Scientist · Data Engineer · IA**
+**Data Scientist · Data Engineer · Data Analyst · IA**
 
 > Je conçois des solutions data **robustes, explicables et utiles** : de l’ingestion à la mise en production, en passant par la modélisation ML/IA et la data visualisation.
 
 Rueil-Malmaison  
 ouldbouya.mohamedlamine@gmail.com  
 +33 7 60 15 54 08  
-Objectif : **stage de fin d’études (6 mois)** à partir dès qye possible - puis CDI  
-Intérêts : **Machine learning** - **IA générative (RAG)** - **Analyse et visualisation via API** - **BDD SQL/No SQL** - ETL
+Objectif : **stage de fin d’études (6 mois)** à partir de début janvier 2026  
+Intérêts : **Machine Learning" - " Data visulisation" - "IA générative** - **Qualité des données** - **Deep learning** - **Cloud** - **ETL**
 
 ---
 
 ## À propos de moi
 
-Actuellement en **Mastère Spécialisé Expert Big Data Engineer (UTT, 2024–2025)**,  
-je combine un parcours **ingénieur** (analyse de risques, reporting automatisé, data qualité)  
-et une solide formation en **science des données**.  
-Je m’intéresse particulièrement à la **création de pipelines de données robustes**, au **Machine learning et deep learning**, à la **RAG (Retrieval-Augmented Generation)** et à la **mise en production de modèles IA**
+Actuellement en **Mastère Spécialisé Expert Big Data Engineer à l'Université de Technologie de Troyes (UTT)**, je combine un parcours **ingénieur** (analyse de risques, reporting automatisé, data qualité) et une solide formation en **science des données**.  
+Je m’intéresse particulièrement à la **création de pipelines de données robustes**, à **l'analyse et la visualisation via API**, à **l'IA générative** et à la **modélisation et mise en production de modèles IA**.
 
 ---
 
 ## Projets phares
 
 ### 1. [Everflow API Analytics](https://github.com/Momo3972/Everflow-API-Analytics)
-> Extraction et visualisation automatique de performances marketing via l’API Everflow.
-- **Stack** : Python, Pandas, Matplotlib, Everflow API  
-- **Fonctionnalités** :
-  - Authentification via clé API sécurisée  
-  - Calcul du profit (revenue – payout)  
-  - Génération de 3 graphiques : *offers*, *affiliates*, *advertisers*  
+> Création d’un mini-dashboard analytique pour visualiser la performance marketing via l’API Everflow
+- **Stack** : Python, Pandas, Matplotlib, Requests, Everflow API  
+- **Méthodes utilisées** :
+  - Connexion sécurisée à l’API Everflow (authentification via clé API)
+  - Extraction et transformation de statistiques agrégées sur une plage de dates données
+  - Calcul du profit (revenue - payout)
+  - Génération automatique de graphiques (offres, affiliés, annonceurs)
   - Export automatique d’un rapport Markdown  
-- **Résultat** : mini-dashboard analytique et réutilisable  
+- **Résultat** : mini-dashboard analytique et réutilisable
 Notebook : `Everflow-API-Analytics.ipynb`
 
 ---
 
 ### 2. [Chatbot RAG IA](https://github.com/Momo3972/chatbot-rag-ia-gen)
-> Assistant conversationnel intelligent relié à une base documentaire.
+> Développement d’un Chatbot IA avec RAG et interface Web (Assistant conversationnel intelligent relié à une base documentaire)
 - **Stack** : Python, LLM (LangChain / OpenAI), RAG, Gradio / Streamlit  
 - **Objectif** : permettre à un utilisateur d’interroger dynamiquement des documents PDF et d’obtenir des réponses contextuelles 
 - **Méthodes utilisées** :
@@ -50,7 +49,7 @@ Notebook : `Everflow-API-Analytics.ipynb`
 ---
 
 ### 3. [Détection de fraude bancaire](https://github.com/Momo3972/projet-fraude)
-> Analyse et modélisation de transactions bancaires pour identifier des signaux faibles de fraude.
+> Analyse et modélisation de transactions bancaires pour identifier des signaux faibles de fraude
 - **Stack** : Python, Pandas, NumPy, Scikit-learn, XGBoost  
 - **Objectif** : améliorer le **rappel** sans dégrader la **précision** sur classes rares  
 - **Méthodes utilisées** :
@@ -87,14 +86,18 @@ Notebook : `Everflow-API-Analytics.ipynb`
 
 ## Expériences professionnelles
 
-### **AERGON (Issy-les-Moulineaux) - Ingénieur d’études** (11/2019 – aujourd’hui) 
-- Études en sécurité/sûreté nucléaire, audit technique et réglementaire  
-- Analyse de risques et automatisation de reporting Excel/VBA  
+### 🔹 **AERGON - Ingénieur d’études** (2019 - aujourd’hui)
+- Réalisation d’études en sécurité et sûreté nucléaire
+- Audit technique et réglementaire en environnement industriel
+- Analyse de risques et automatisation de reporting
+- Manipulation de jeux de données réglementaires
+**Environnement technologique** : Word, Excel, VBA
 **Compétences** : rigueur, qualité des données, automatisation, data reporting
 
-### **IRD (Toulouse) - Ingénieur stagiaire (modélisation numérique)** (2013)
+### 🔹 **IRD — Ingénieur stagiaire (modélisation numérique)** (2013)
 - Intégration et interpolation de données physiques 3D sous GOCAD  
-- Génération de modèles par inversion et analyses exploratoires  
+- Génération de modèles par inversion et analyses exploratoires
+**Environnement technologique** : Gocad, Word, Excel
 **Compétences** : traitement de données, interpolation, modélisation scientifique
 
 ---
@@ -113,9 +116,9 @@ Lecture technique & IA | Football | Cuisine | Poésie
 
 ## Me retrouver
 - **Portfolio en ligne** → [momo3972.github.io/Portfolio-Data-IA](https://momo3972.github.io/Portfolio-Data-IA/)  
-- **LinkedIn** → [linkedin.com/in/mohamed-lamine-ould-bouya-ab465211b](https://www.linkedin.com/in/mohamed-lamine-ould-bouya-ab465211b/)  
+- **LinkedIn** → [linkedin.com/in/mohamedlamineouldbouya](https://www.linkedin.com/in/mohamedlamineouldbouya)  
 - **GitHub** → [github.com/Momo3972](https://github.com/Momo3972)
 
 ---
 
-Je cherche à rejoindre une équipe data ambitieuse pour transformer les données en valeur métier réelle, en combinant rigueur analytique, esprit d’ingénierie et créativité IA.
+> *Je cherche à rejoindre une équipe data ambitieuse pour transformer les données en valeur métier réelle, en combinant rigueur analytique, esprit d’ingénierie et créativité IA.*
