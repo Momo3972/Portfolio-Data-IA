@@ -70,9 +70,9 @@ Notebook : `Everflow-API-Analytics.ipynb`
  - Modélisation en étoile (Tables de faits et dimensions)
  - Création de mesures DAX (Total Ventes, Total Profit, Quantité vendue, Marge)
  - Visualisations avancées :
-  - Graphique temporel des ventes (Année-Mois)
-  - Top 10 des pays par chiffre d’affaires
-  - Répartition des ventes par catégorie de produits
+  --> Graphique temporel des ventes (Année-Mois)
+  --> Top 10 des pays par chiffre d’affaires
+  --> Répartition des ventes par catégorie de produits
  - Filtres dynamiques : année, segment client, catégorie produit, pays
  - Page d’infobulle personnalisée (tooltip) pour afficher l’évolution du chiffre d’affaires d’un pays au survol
  - Page "À propos" pour documenter la démarche analytique
