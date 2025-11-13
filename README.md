@@ -1,7 +1,7 @@
 # Mohamed Lamine OULD BOUYA  
 **Data Scientist · Data Engineer · Data Analyst · IA**
 
-> Je conçois des solutions data **robustes, explicables et utiles** : de l’ingestion à la mise en production, en passant par la modélisation ML/IA et la data visualisation.
+> Je conçois des solutions data robustes, explicables et utiles : de l’ingestion à la mise en production, en passant par la modélisation ML/IA et la data visualisation.
 
 Rueil-Malmaison  
 ouldbouya.mohamedlamine@gmail.com  
@@ -14,7 +14,7 @@ Intérêts : **Machine Learning" - " Data visulisation" - "IA générative** - *
 ## À propos de moi
 
 Actuellement en **Mastère Spécialisé Expert Big Data Engineer à l'Université de Technologie de Troyes (UTT)**, je combine un parcours **ingénieur** (analyse de risques, reporting automatisé, data qualité) et une solide formation en **science des données**.  
-Je m’intéresse particulièrement à la **création de pipelines de données robustes**, à **l'analyse et la visualisation via API**, à **l'IA générative** et à la **modélisation et mise en production de modèles IA**.
+Je m’intéresse particulièrement à la **création de pipelines de données robustes**, à **l'analyse et la visualisation via API**, à **l'IA générative**, à la **modélisation et la mise en production de modèles IA**.
 
 ---
 
@@ -40,11 +40,11 @@ Notebook : `Everflow-API-Analytics.ipynb`
 - **Objectif** : permettre à un utilisateur d’interroger dynamiquement des documents PDF et d’obtenir des réponses contextuelles 
 - **Méthodes utilisées** :
  - Conception d’une chaîne RAG complète (indexation, embeddings, retrieval et génération)
-- Intégration d’API IA et création d’une interface Web interactive (Gradio / Streamlit)
+ - Intégration d’API IA et création d’une interface Web interactive (Gradio / Streamlit)
 - **Livrables** :
-  - Application Web interactive  
-  - Chaîne RAG complète (embedding + retrieval + génération)  
-  - Évaluation basique de la pertinence des réponses  
+ - Application Web interactive  
+ - Chaîne RAG complète (embedding + retrieval + génération)  
+ - Évaluation basique de la pertinence des réponses  
 
 ---
 
@@ -57,6 +57,29 @@ Notebook : `Everflow-API-Analytics.ipynb`
   - Gestion du déséquilibre via **SMOTE**
   - Entraînement et optimisation de modèles : Régression logistique, Random Forest, XGBoost ; évaluation avec F1-score, AUC-ROC, précision-rappel
 - **Résultat** : amélioration du score **F1** et meilleure détection de fraudes rares  
+
+---
+
+### 4. [Dashboard Power BI](https://github.com/Momo3972/powerbi-global-superstore-dashboard)
+> Création d’un tableau de bord interactif avec Power BI pour analyser les ventes, profits et performances commerciales du dataset Global Superstore
+- **Stack** : Power BI Desktop, Power Query, DAX, Excel  
+- **Objectif** : Fournir un tableau de bord professionnel permettant d’analyser les performances commerciales : évolution du chiffre d’affaires, top des pays contributeurs, répartition des ventes par catégories de produits et KPIs essentiels (ventes, profits, volume, marge) 
+- **Méthodes utilisées** :
+ - Analyse des besoins métier et identification des indicateurs clés (KPI)
+ - Nettoyage & transformation des données dans Power Query
+ - Modélisation en étoile (Tables de faits et dimensions)
+ - Création de mesures DAX (Total Ventes, Total Profit, Quantité vendue, Marge)
+ - Visualisations avancées :
+  - Graphique temporel des ventes (Année-Mois)
+  - Top 10 des pays par chiffre d’affaires
+  - Répartition des ventes par catégorie de produits
+ - Filtres dynamiques : année, segment client, catégorie produit, pays
+ - Page d’infobulle personnalisée (tooltip) pour afficher l’évolution du chiffre d’affaires d’un pays au survol
+ - Page "À propos" pour documenter la démarche analytique
+- **Livrables** :
+ - Tableau de bord complet Power BI : Suivi des performances commerciales
+ - Visualisations interactives + filtres dynamiques + infobulle contextualisée
+ - Documentation claire (README + page dédiée dans Power BI)
 
 ---
 
@@ -94,7 +117,7 @@ Notebook : `Everflow-API-Analytics.ipynb`
 **Environnement technologique** : Word, Excel, VBA
 **Compétences** : rigueur, qualité des données, automatisation, data reporting
 
-### 🔹 **IRD — Ingénieur stagiaire (modélisation numérique)** (2013)
+### 🔹 **IRD - Ingénieur stagiaire (modélisation numérique)** (2013)
 - Intégration et interpolation de données physiques 3D sous GOCAD  
 - Génération de modèles par inversion et analyses exploratoires
 **Environnement technologique** : Gocad, Word, Excel
