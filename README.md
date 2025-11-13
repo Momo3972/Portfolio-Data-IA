@@ -7,14 +7,14 @@ Rueil-Malmaison
 ouldbouya.mohamedlamine@gmail.com  
 +33 7 60 15 54 08  
 Objectif : **stage de fin d’études (6 mois)** à partir de début janvier 2026  
-Intérêts : **Machine Learning" - " Data visulisation" - "IA générative** - **Qualité des données** - **Deep learning** - **Cloud** - **ETL**
+Intérêts : Machine Learning - Data visulisation - IA générative - Qualité des données - Deep learning - Cloud - ETL
 
 ---
 
 ## À propos de moi
 
 Actuellement en **Mastère Spécialisé Expert Big Data Engineer à l'Université de Technologie de Troyes (UTT)**, je combine un parcours **ingénieur** (analyse de risques, reporting automatisé, data qualité) et une solide formation en **science des données**.  
-Je m’intéresse particulièrement à la **création de pipelines de données robustes**, à **l'analyse et la visualisation via API**, à **l'IA générative**, à la **modélisation et la mise en production de modèles IA**.
+Je m’intéresse particulièrement à la création de pipelines de données robustes, à l'analyse et la visualisation via API, à l'IA générative, à la modélisation et la mise en production de modèles IA.
 
 ---
 
@@ -69,10 +69,10 @@ Notebook : `Everflow-API-Analytics.ipynb`
  - Nettoyage & transformation des données dans Power Query
  - Modélisation en étoile (Tables de faits et dimensions)
  - Création de mesures DAX (Total Ventes, Total Profit, Quantité vendue, Marge)
- - Visualisations avancées :
-  --> Graphique temporel des ventes (Année-Mois)
-  --> Top 10 des pays par chiffre d’affaires
-  --> Répartition des ventes par catégorie de produits
+ - Visualisations avancées : 
+  a-) Graphique temporel des ventes (Année-Mois)
+  b-) Top 10 des pays par chiffre d’affaires
+  c-) Répartition des ventes par catégorie de produits
  - Filtres dynamiques : année, segment client, catégorie produit, pays
  - Page d’infobulle personnalisée (tooltip) pour afficher l’évolution du chiffre d’affaires d’un pays au survol
  - Page "À propos" pour documenter la démarche analytique
