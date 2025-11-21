@@ -32,9 +32,63 @@ Je m’intéresse particulièrement à la création de pipelines de données rob
 - **Résultat** : mini-dashboard analytique et réutilisable
 Notebook : `Everflow-API-Analytics.ipynb`
 
+### 2. [Classification d’Images CIFAR-10 (CNN et Transfer Learning EfficientNetB0)](https://github.com/Momo3972/deepvision-cifar10-classifier)
+> Développement d’un système complet de classification d’images basé sur le dataset CIFAR-10, incluant un modèle CNN construit from scratch et un modèle EfficientNetB0 utilisant le Transfer Learning et le Fine-Tuning
+- **Stack** : Python, TensorFlow / Keras, NumPy, Matplotlib, Scikit-learn, Google Colab  
+- **Objectif** : Construire et comparer deux approches pour classifier les images CIFAR-10 :
+ - un CNN baseline simple entraîné from scratch
+ - un modèle EfficientNetB0 pré-entraîné sur ImageNet puis affiné (fine-tuning) pour CIFAR-10
+L’objectif est de mesurer l’impact du Transfer Learning sur la performance finale 
+- **Méthodes utilisées** :
+Exploration & Préparation
+- Visualisation d'exemples du dataset CIFAR-10
+- Normalisation des images
+- Création de pipelines d’entraînement, validation et test (tf.data)
+
+Modèle CNN (baseline)
+- Architecture personnalisée : Conv2D → MaxPool → Dropout → Dense
+- Entraînement complet sur CIFAR-10
+- Analyse des courbes d’apprentissage (accuracy / loss)
+
+Transfer Learning - EfficientNetB0
+- Chargement d’un modèle pré-entraîné (ImageNet)
+- Première phase : backbone gelé + classification head personnalisée
+- Deuxième phase : fine-tuning complet
+- Suivi des performances sur 2 phases concaténées
+
+Évaluation
+- Rapport de classification (precision, recall, f1-score)
+- Matrice de confusion détaillée
+- Comparaison finale CNN vs EfficientNetB0
+- Gain absolu d’accuracy sur le test set
+
+**Résultat**
+CNN baseline :
+- Test accuracy ≈ 0.70
+- Test loss ≈ 0.86
+
+EfficientNetB0 (Transfer Learning) :
+- Test accuracy ≈ 0.95
+- Test loss ≈ 0.16
+- Gain absolu ≈ +0.24
+
+Le modèle EfficientNetB0 offre une amélioration nette sur toutes les classes, confirmée par les matrices de confusion et scores F1.
+
+- **Livrables** :
+Notebook complet : 01_cifar10_cnn.ipynb
+Modèles entraînés :
+- cnn_baseline_cifar10.h5
+- efficientnetb0_tl_cifar10.h5
+Rapport automatisé PDF
+README du projet avec structure et explication
+Visualisations : courbes d’apprentissage, matrices de confusion
+
+**Résumé**
+Ce projet démontre l’intérêt du Transfer Learning en vision par ordinateur et met en évidence l’écart de performance entre un CNN traditionnel et un modèle moderne pré-entraîné
+
 ---
 
-### 2. [Chatbot RAG IA](https://github.com/Momo3972/chatbot-rag-ia-gen)
+### 3. [Chatbot RAG IA](https://github.com/Momo3972/chatbot-rag-ia-gen)
 > Développement d’un Chatbot IA avec RAG et interface Web (Assistant conversationnel intelligent relié à une base documentaire)
 - **Stack** : Python, LLM (LangChain / OpenAI), RAG, Gradio / Streamlit  
 - **Objectif** : permettre à un utilisateur d’interroger dynamiquement des documents PDF et d’obtenir des réponses contextuelles 
@@ -48,7 +102,7 @@ Notebook : `Everflow-API-Analytics.ipynb`
 
 ---
 
-### 3. [Détection de fraude bancaire](https://github.com/Momo3972/projet-fraude)
+### 4. [Détection de fraude bancaire](https://github.com/Momo3972/projet-fraude)
 > Analyse et modélisation de transactions bancaires pour identifier des signaux faibles de fraude
 - **Stack** : Python, Pandas, NumPy, Scikit-learn, XGBoost  
 - **Objectif** : améliorer le **rappel** sans dégrader la **précision** sur classes rares  
@@ -60,7 +114,7 @@ Notebook : `Everflow-API-Analytics.ipynb`
 
 ---
 
-### 4. [Dashboard Power BI](https://github.com/Momo3972/powerbi-global-superstore-dashboard)
+### 5. [Dashboard Power BI](https://github.com/Momo3972/powerbi-global-superstore-dashboard)
 > Création d’un tableau de bord interactif avec Power BI pour analyser les ventes, profits et performances commerciales du dataset Global Superstore
 - **Stack** : Power BI Desktop, Power Query, DAX, Excel  
 - **Objectif** : Fournir un tableau de bord professionnel permettant d’analyser les performances commerciales : évolution du chiffre d’affaires, top des pays contributeurs, répartition des ventes par catégories de produits et KPIs essentiels (ventes, profits, volume, marge) 
