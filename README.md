@@ -63,6 +63,7 @@ Transfer Learning - EfficientNetB0
 - Gain absolu d’accuracy sur le test set
 
 **Résultat**
+
 CNN baseline :
 - Test accuracy ≈ 0.70
 - Test loss ≈ 0.86
@@ -75,6 +76,7 @@ EfficientNetB0 (Transfer Learning) :
 Le modèle EfficientNetB0 offre une amélioration nette sur toutes les classes, confirmée par les matrices de confusion et scores F1.
 
 - **Livrables** :
+
 Notebook complet : 01_cifar10_cnn.ipynb
 Modèles entraînés :
 - cnn_baseline_cifar10.h5
@@ -84,6 +86,7 @@ README du projet avec structure et explication
 Visualisations : courbes d’apprentissage, matrices de confusion
 
 **Résumé**
+
 Ce projet démontre l’intérêt du Transfer Learning en vision par ordinateur et met en évidence l’écart de performance entre un CNN traditionnel et un modèle moderne pré-entraîné
 
 ---
@@ -143,6 +146,7 @@ Ce projet démontre l’intérêt du Transfer Learning en vision par ordinateur 
 |----------|-------------|
 | **Langages** | Python, SQL, R, Excel |
 | **Machine Learning** | Scikit-learn, XGBoost, PCA, SMOTE |
+| **Deep Learning / Computer vision** | CNN, Transfer Learning, EfficientNet, Python, TensorFlow/Keras, NumPy, Matplotlib, Scikit-learn, Google Colab |
 | **Visualisation** | Power BI, Tableau, Plotly, Matplotlib, Seaborn |
 | **Base de données** | MySQL, MongoDB |
 | **Cloud / Big Data** | Google Cloud Platform (GCP), Snowflake, Databricks |
@@ -192,9 +196,9 @@ Lecture technique & IA | Football | Cuisine | Poésie
 ---
 
 ## Me retrouver
-- **Portfolio en ligne** → [momo3972.github.io/Portfolio-Data-IA](https://momo3972.github.io/Portfolio-Data-IA/)  
-- **LinkedIn** → [linkedin.com/in/mohamedlamineouldbouya](https://www.linkedin.com/in/mohamedlamineouldbouya)  
-- **GitHub** → [github.com/Momo3972](https://github.com/Momo3972)
+- **Portfolio en ligne** -> [momo3972.github.io/Portfolio-Data-IA](https://momo3972.github.io/Portfolio-Data-IA/)
+- **GitHub** -> [github.com/Momo3972](https://github.com/Momo3972)
+- **LinkedIn** -> [linkedin.com/in/mohamedlamineouldbouya](https://linkedin.com/in/mohamed-lamineould-bouya-ab465211b)  
 
 ---
 
