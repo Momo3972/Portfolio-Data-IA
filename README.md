@@ -140,6 +140,39 @@ Ce projet démontre l’intérêt du Transfer Learning en vision par ordinateur 
 
 ---
 
+### 6. [Oil Reservoir Prediction – Machine Learning géologique](https://github.com/Momo3972/oil-reservoir-prediction-ml)
+
+> Prédiction de la présence d’un réservoir pétrolier à partir de données géologiques et sismiques simulées - avec analyse d’interprétabilité SHAP pour valider la cohérence géologique
+
+- **Stack** : Python, Pandas, NumPy, Scikit-learn, Random Forest, XGBoost, Matplotlib, SHAP
+- **Objectif** : prédire la présence d’hydrocarbures avant forage, en exploitant des caractéristiques géologiques (porosité, type de roche, piège, profondeur, distance aux champs existants, signature sismique)
+- **Méthodes utilisées** :
+  - Analyse exploratoire (EDA) géologique
+  - Préparation des données & encodage des variables catégorielles
+  - Entraînement et optimisation d’un modèle (GridSearchCV)
+  - Comparaison de trois modèles : **Logistic Regression**, **Random Forest optimisé**, **XGBoost optimisé**
+  - Évaluation approfondie (Accuracy, Recall, Precision, F1, ROC-AUC)
+  - Interprétabilité avancée avec **SHAP** :
+    - Summary Plot (vue globale des variables)
+    - Force Plot (explication locale d’une observation)
+    - Bar Plot (importance moyenne des features)
+- **Résultat** :
+  - Le **Random Forest optimisé** obtient le meilleur score (**ROC-AUC ≈ 0.87**)
+  - Les variables les plus déterminantes sont :
+    - **Seismic_Score** (signal sismique fort -> structures favorables)
+    - **Rock_Type** (grès / calcaire -> bons réservoirs)
+    - **Trap_Type** (anticline / faille / dôme → accumulation d’hydrocarbures)
+    - **Porosity** et **Permeability** (qualité du réservoir)
+    - **Distance aux champs existants**
+  - L’analyse SHAP confirme que le modèle prend des décisions **géologiquement cohérentes**
+- **Livrables** :
+  - Notebook complet d'analyse & modélisation (`oil-prediction.ipynb`)
+  - Modèle optimisé exporté : `best_random_forest_oil_reservoir.joblib`
+  - Visualisations : matrice de confusion, ROC curve, summary SHAP, force plot, barplot SHAP
+  - README complet documentant la démarche scientifique et géologique
+
+---
+
 ## Compétences techniques
 
 | Domaine | Compétences |
