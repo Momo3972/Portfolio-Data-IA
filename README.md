@@ -191,7 +191,7 @@ EfficientNetB0 montre une amélioration substantielle sur la précision, la robu
 
 ---
 
-### 6. [Prédiction d'un réservoir pétrolier](https://github.com/Momo3972/oil-reservoir-prediction-ml)
+### 6. [Prédiction de la présence d'un réservoir pétrolier](https://github.com/Momo3972/oil-reservoir-prediction-ml)
 
 > Prédiction de la présence d’un réservoir pétrolier à partir de données géologiques et sismiques simulées - avec analyse d’interprétabilité SHAP pour valider la cohérence géologique
 
