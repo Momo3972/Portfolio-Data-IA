@@ -21,99 +21,142 @@ Je m’intéresse particulièrement à la création de pipelines de données rob
 ## Projets phares
 
 ### 1. [Everflow API Analytics](https://github.com/Momo3972/Everflow-API-Analytics)
-> Création d’un mini-dashboard analytique pour visualiser la performance marketing via l’API Everflow
-- **Stack** : Python, Pandas, Matplotlib, Requests, Everflow API  
+
+> Développement d’un mini-système analytique pour visualiser la performance marketing via l’API Everflow, incluant l’extraction de données, le calcul de métriques clés (profit), et la génération automatique de graphiques et d’un rapport Markdown.
+
+- **Stack** : Python, Pandas, Matplotlib, Requests, Everflow API
+
 - **Méthodes utilisées** :
   - Connexion sécurisée à l’API Everflow (authentification via clé API)
-  - Extraction et transformation de statistiques agrégées sur une plage de dates données
-  - Calcul du profit (revenue - payout)
-  - Génération automatique de graphiques (offres, affiliés, annonceurs)
-  - Export automatique d’un rapport Markdown  
-- **Résultat** : mini-dashboard analytique et réutilisable
-Notebook : `Everflow-API-Analytics.ipynb`
-
-### 2. [Classification d’Images CIFAR-10 (CNN et Transfer Learning EfficientNetB0)](https://github.com/Momo3972/deepvision-cifar10-classifier)
-> Développement d’un système complet de classification d’images basé sur le dataset CIFAR-10, incluant un modèle CNN construit from scratch et un modèle EfficientNetB0 utilisant le Transfer Learning et le Fine-Tuning
-- **Stack** : Python, TensorFlow / Keras, NumPy, Matplotlib, Scikit-learn, Google Colab  
-- **Objectif** : Construire et comparer deux approches pour classifier les images CIFAR-10 :
- - un CNN baseline simple entraîné from scratch
- - un modèle EfficientNetB0 pré-entraîné sur ImageNet puis affiné (fine-tuning) pour CIFAR-10
-L’objectif est de mesurer l’impact du Transfer Learning sur la performance finale 
-- **Méthodes utilisées** :
-Exploration & Préparation
-- Visualisation d'exemples du dataset CIFAR-10
-- Normalisation des images
-- Création de pipelines d’entraînement, validation et test (tf.data)
-
-Modèle CNN (baseline)
-- Architecture personnalisée : Conv2D → MaxPool → Dropout → Dense
-- Entraînement complet sur CIFAR-10
-- Analyse des courbes d’apprentissage (accuracy / loss)
-
-Transfer Learning - EfficientNetB0
-- Chargement d’un modèle pré-entraîné (ImageNet)
-- Première phase : backbone gelé + classification head personnalisée
-- Deuxième phase : fine-tuning complet
-- Suivi des performances sur 2 phases concaténées
-
-Évaluation
-- Rapport de classification (precision, recall, f1-score)
-- Matrice de confusion détaillée
-- Comparaison finale CNN vs EfficientNetB0
-- Gain absolu d’accuracy sur le test set
-
-**Résultat**
-
-CNN baseline :
-- Test accuracy ≈ 0.70
-- Test loss ≈ 0.86
-
-EfficientNetB0 (Transfer Learning) :
-- Test accuracy ≈ 0.95
-- Test loss ≈ 0.16
-- Gain absolu ≈ +0.24
-
-Le modèle EfficientNetB0 offre une amélioration nette sur toutes les classes, confirmée par les matrices de confusion et scores F1.
+  - Extraction et transformation de statistiques agrégées (offres, affiliés, annonceurs)
+  - Calcul du profit (revenue – payout)
+  - Génération automatique de graphiques analytiques
+  - Export automatique d’un rapport Markdown
+  - Structuration modulaire : `src/`, `mock_data/`, `out/`
 
 - **Livrables** :
+  - Notebook complet : *Everflow-API-Analytics.ipynb*
+  - Rapport Markdown généré automatiquement
+  - Fichiers de sortie dans `out/` :
+    - profits par offre
+    - profits par affilié
+    - profits par annonceur
+    - rapport global (*REPORT*)
 
-Notebook complet : 01_cifar10_cnn.ipynb
-Modèles entraînés :
-- cnn_baseline_cifar10.h5
-- efficientnetb0_tl_cifar10.h5
-Rapport automatisé PDF
-README du projet avec structure et explication
-Visualisations : courbes d’apprentissage, matrices de confusion
-
-**Résumé**
-
-Ce projet démontre l’intérêt du Transfer Learning en vision par ordinateur et met en évidence l’écart de performance entre un CNN traditionnel et un modèle moderne pré-entraîné
+- **Résultat** :
+  Déploiement d’un mini-dashboard analytique automatisé permettant une visualisation rapide et exploitable des performances marketing via l’API Everflow.
 
 ---
 
-### 3. [Chatbot RAG IA](https://github.com/Momo3972/chatbot-rag-ia-gen)
-> Développement d’un Chatbot IA avec RAG et interface Web (Assistant conversationnel intelligent relié à une base documentaire)
+## 2. [Classification d’Images CIFAR-10 (CNN et Transfer Learning EfficientNetB0](https://github.com/Momo3972/deepvision-cifar10-classifier)
+
+> Développement d’un système complet de classification d’images basé sur le dataset CIFAR-10, incluant un modèle CNN construit from scratch et un modèle EfficientNetB0 utilisant du Transfer Learning  et du Fine-Tuning pour maximiser les performances
+
+### • Stack :
+Python, TensorFlow / Keras, NumPy, Matplotlib, Scikit-learn, Google Colab
+
+### • Objectif :
+Construire et comparer deux approches pour classifier les images CIFAR-10 :
+
+- un modèle **CNN baseline** entièrement entraîné from scratch  
+- un modèle **EfficientNetB0 pré-entraîné sur ImageNet**, puis affiné (fine-tuning)  
+  → objectif : mesurer l’impact du Transfer Learning sur la performance finale
+
+### • Méthodes utilisées :
+
+- Exploration & préparation des données  
+- Visualisation d’exemples CIFAR-10  
+- Normalisation des images  
+- Création de pipelines d’entraînement, validation et test
+
+### • Modèle CNN (baseline)
+
+- Architecture personnalisée : **Conv2D → MaxPool → Dropout → Dense**  
+- Entraînement complet sur CIFAR-10  
+- Analyse des courbes d’apprentissage (accuracy / loss)  
+
+### Transfer Learning – EfficientNetB0
+
+- Chargement d’un modèle pré-entraîné (**ImageNet**)  
+- Phase 1 : backbone gelé + classification head personnalisée  
+- Phase 2 : **fine-tuning** complet  
+- Suivi des performances sur les **2 phases concaténées**
+
+### Évaluation
+
+- Rapport complet : précision, rappel, f1-score  
+- Matrice de confusion détaillée  
+- Comparaison finale **CNN vs EfficientNetB0**  
+- Analyse du gain absolu d’accuracy sur le test set  
+
+### Résultat
+#### CNN baseline :
+- **Test accuracy ≈ 0.70**  
+- **Test loss ≈ 0.86**
+#### EfficientNetB0 (Transfer Learning) :
+- **Test accuracy ≈ 0.95**  
+- **Test loss ≈ 0.16**  
+- **Gain absolu ≈ +0.24 en accuracy**
+
+EfficientNetB0 surclasse nettement le CNN baseline sur toutes les classes, confirmé par les matrices de confusion et les scores F1.
+
+### • Livrables :
+
+- Notebook complet : `01_cifar10_cnn.ipynb`  
+- Modèles entraînés :  
+  - `cnn_baseline_cifar10.h5`  
+  - `efficientnetb0_tl_cifar10.h5`  
+- Rapport automatisé PDF / README du projet  
+- Visualisations : courbes d’apprentissage, matrices de confusion
+
+### Résumé
+
+Ce projet démontre l’intérêt du **Transfer Learning** en vision par ordinateur et met en évidence l’écart de performance entre un CNN traditionnel et un modèle moderne pré-entraîné.  
+EfficientNetB0 montre une amélioration substantielle sur la précision, la robustesse et la généralisation.
+
+---
+
+### 3. [Chatbot RAG IA Générative](https://github.com/Momo3972/chatbot-rag-ia-gen)
+
+> Développement d’un chatbot IA utilisant une architecture RAG et une interface Web, permettant d’interroger dynamiquement une base documentaire PDF et d’obtenir des réponses contextualisées
+
 - **Stack** : Python, LLM (LangChain / OpenAI), RAG, Gradio / Streamlit  
-- **Objectif** : permettre à un utilisateur d’interroger dynamiquement des documents PDF et d’obtenir des réponses contextuelles 
-- **Méthodes utilisées** :
- - Conception d’une chaîne RAG complète (indexation, embeddings, retrieval et génération)
- - Intégration d’API IA et création d’une interface Web interactive (Gradio / Streamlit)
-- **Livrables** :
- - Application Web interactive  
- - Chaîne RAG complète (embedding + retrieval + génération)  
- - Évaluation basique de la pertinence des réponses  
+
+- **Objectif** : permettre à un utilisateur d’interroger des documents (PDF, textes) et d’obtenir des réponses précises, contextualisées et sourcées  
+
+- **Méthodes utilisées** :  
+  - Conception d’une chaîne RAG complète : *indexation, embeddings, retrieval, génération*  
+  - Intégration d’une API IA (OpenAI / autres LLMs)  
+  - Création d’une interface Web interactive (Gradio / Streamlit)  
+  - Tests de pertinence et ajustements de la chaîne (chunking, embeddings, scoring de similarité)  
+
+- **Livrables** :  
+  - Application Web interactive prête à l’emploi  
+  - Chaîne RAG complète (*embedding -> retrieval -> génération*)  
+  - Évaluation de la pertinence des réponses et amélioration de la qualité du chatbot   
 
 ---
 
 ### 4. [Détection de fraude bancaire](https://github.com/Momo3972/projet-fraude)
-> Analyse et modélisation de transactions bancaires pour identifier des signaux faibles de fraude
+
+> Analyse et modélisation de transactions bancaires pour identifier des signaux faibles de fraude dans un contexte de données fortement déséquilibrées
+
 - **Stack** : Python, Pandas, NumPy, Scikit-learn, XGBoost  
-- **Objectif** : améliorer le **rappel** sans dégrader la **précision** sur classes rares  
-- **Méthodes utilisées** :
-  - Nettoyage, préparation et analyse des données (EDA, catégorielle et temporelle)
-  - Gestion du déséquilibre via **SMOTE**
-  - Entraînement et optimisation de modèles : Régression logistique, Random Forest, XGBoost ; évaluation avec F1-score, AUC-ROC, précision-rappel
-- **Résultat** : amélioration du score **F1** et meilleure détection de fraudes rares  
+- **Objectif** : améliorer le **rappel** de la classe frauduleuse sans dégrader la **précision**, dans un dataset où les fraudes représentent <1 % des transactions  
+- **Méthodes utilisées** :  
+  - Analyse exploratoire (EDA) des variables financières et temporelles  
+  - Préparation des données : nettoyage, encodage, feature engineering  
+  - Gestion du déséquilibre via **SMOTE**  
+  - Entraînement et optimisation de modèles : **Régression Logistique**, **Random Forest**, **XGBoost**  
+  - Évaluation avancée : F1-score, AUC-ROC, courbes précision-rappel, matrice de confusion  
+  - Sélection du meilleur modèle basé sur sa capacité à détecter les fraudes rares  
+- **Résultat** : amélioration du **F1-score** et meilleure détection des transactions frauduleuses minoritaires  
+- **Livrables** :  
+  - Notebook complet `fraude_detection.ipynb`  
+  - Visualisations : matrices de confusion, ROC/PR curves, importances des features (`reports/figures/`)  
+  - Fichier de métriques JSON (`reports/metrics/metrics.json`)  
+  - Jeux de données nettoyés (`train_split.csv`, `test_split.csv`)  
+  - README structuré documentant toute la démarche   
 
 ---
 
@@ -169,7 +212,7 @@ Ce projet démontre l’intérêt du Transfer Learning en vision par ordinateur 
   - Les variables les plus déterminantes sont :
     - **Seismic_Score** (signal sismique fort -> structures favorables)
     - **Rock_Type** (grès / calcaire -> bons réservoirs)
-    - **Trap_Type** (anticline / faille / dôme → accumulation d’hydrocarbures)
+    - **Trap_Type** (anticline / faille / dôme -> accumulation d’hydrocarbures)
     - **Porosity** et **Permeability** (qualité du réservoir)
     - **Distance aux champs existants**
   - L’analyse SHAP confirme que le modèle prend des décisions **géologiquement cohérentes**
