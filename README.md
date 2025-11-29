@@ -282,7 +282,7 @@ Lecture technique & IA | Football | Cuisine | Poésie
 ## Me retrouver
 - **Portfolio en ligne** -> [momo3972.github.io/Portfolio-Data-IA](https://momo3972.github.io/Portfolio-Data-IA/)
 - **GitHub** -> [github.com/Momo3972](https://github.com/Momo3972)
-- **LinkedIn** -> [linkedin.com/in/mohamedlamineouldbouya](https://linkedin.com/in/mohamed-lamineould-bouya-ab465211b)  
+- **LinkedIn** -> [https://linkedin.com/in/mohamed-lamineould-bouya-ab465211b](https://linkedin.com/in/mohamed-lamineould-bouya-ab465211b)  
 
 ---
 
