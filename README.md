@@ -117,30 +117,38 @@ Ce projet démontre l’intérêt du Transfer Learning en vision par ordinateur 
 
 ---
 
-### 5. [Dashboard Power BI](https://github.com/Momo3972/powerbi-global-superstore-dashboard)
-> Création d’un tableau de bord interactif avec Power BI pour analyser les ventes, profits et performances commerciales du dataset Global Superstore
+### 5. [Dashboard Power BI - Analyse de la performance commerciale](https://github.com/Momo3972/projet-powerbi-superstore)
+
+> Création d’un tableau de bord interactif pour analyser les ventes, profits et performances commerciales du dataset Global Superstore
+
 - **Stack** : Power BI Desktop, Power Query, DAX, Excel  
-- **Objectif** : Fournir un tableau de bord professionnel permettant d’analyser les performances commerciales : évolution du chiffre d’affaires, top des pays contributeurs, répartition des ventes par catégories de produits et KPIs essentiels (ventes, profits, volume, marge) 
+- **Objectif** : fournir un tableau de bord professionnel permettant :
+  - d’analyser l’évolution du chiffre d’affaires,
+  - d’identifier les pays contributeurs,
+  - de visualiser la répartition des ventes par catégories de produits,
+  - et de suivre les KPIs essentiels (ventes, profits, volume, marges).
+
 - **Méthodes utilisées** :
- - Analyse des besoins métier et identification des indicateurs clés (KPI)
- - Nettoyage & transformation des données dans Power Query
- - Modélisation en étoile (Tables de faits et dimensions)
- - Création de mesures DAX (Total Ventes, Total Profit, Quantité vendue, Marge)
- - Visualisations avancées : 
-  a-) Graphique temporel des ventes (Année-Mois)
-  b-) Top 10 des pays par chiffre d’affaires
-  c-) Répartition des ventes par catégorie de produits
- - Filtres dynamiques : année, segment client, catégorie produit, pays
- - Page d’infobulle personnalisée (tooltip) pour afficher l’évolution du chiffre d’affaires d’un pays au survol
- - Page "À propos" pour documenter la démarche analytique
+  - Analyse des besoins métier et identification des indicateurs clés (KPI)
+  - Nettoyage, transformation et modélisation des données via **Power Query**
+  - Modélisation en étoile (**tables de faits et dimensions**)
+  - Création de mesures DAX : Total Ventes, Total Profit, Quantité vendue, Marge
+  - Visualisations avancées :
+    - Graphique temporel des ventes (année / mois)
+    - Top 10 des pays par chiffre d’affaires
+    - Répartition des ventes par catégorie de produits
+  - Filtres dynamiques : année, segment client, catégorie produit, pays
+  - Page d’infobulle (tooltip) personnalisée pour contextualiser les ventes
+  - Page “À propos” documentant la démarche analytique
+
 - **Livrables** :
- - Tableau de bord complet Power BI : Suivi des performances commerciales
- - Visualisations interactives + filtres dynamiques + infobulle contextualisée
- - Documentation claire (README + page dédiée dans Power BI)
+  - Tableau de bord Power BI complet : **analyse des performances commerciales**
+  - Visualisations interactives + filtres dynamiques + infobulle contextualisée
+  - Documentation claire (README + page dédiée dans Power BI)
 
 ---
 
-### 6. [Oil Reservoir Prediction – Machine Learning géologique](https://github.com/Momo3972/oil-reservoir-prediction-ml)
+### 6. [Prédiction d'un réservoir pétrolier](https://github.com/Momo3972/oil-reservoir-prediction-ml)
 
 > Prédiction de la présence d’un réservoir pétrolier à partir de données géologiques et sismiques simulées - avec analyse d’interprétabilité SHAP pour valider la cohérence géologique
 
