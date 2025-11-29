@@ -29,7 +29,7 @@ Je m’intéresse particulièrement à la création de pipelines de données rob
 - **Méthodes utilisées** :
   - Connexion sécurisée à l’API Everflow (authentification via clé API)
   - Extraction et transformation de statistiques agrégées (offres, affiliés, annonceurs)
-  - Calcul du profit (revenue – payout)
+  - Calcul du profit (revenue - payout)
   - Génération automatique de graphiques analytiques
   - Export automatique d’un rapport Markdown
   - Structuration modulaire : `src/`, `mock_data/`, `out/`
@@ -48,7 +48,7 @@ Je m’intéresse particulièrement à la création de pipelines de données rob
 
 ---
 
-## 2. [Classification d’Images CIFAR-10 (CNN et Transfer Learning EfficientNetB0](https://github.com/Momo3972/deepvision-cifar10-classifier)
+## 2. [Classification d’Images CIFAR-10 (CNN et Transfer Learning EfficientNetB0)](https://github.com/Momo3972/deepvision-cifar10-classifier)
 
 > Développement d’un système complet de classification d’images basé sur le dataset CIFAR-10, incluant un modèle CNN construit from scratch et un modèle EfficientNetB0 utilisant du Transfer Learning  et du Fine-Tuning pour maximiser les performances
 
@@ -60,22 +60,22 @@ Construire et comparer deux approches pour classifier les images CIFAR-10 :
 
 - un modèle **CNN baseline** entièrement entraîné from scratch  
 - un modèle **EfficientNetB0 pré-entraîné sur ImageNet**, puis affiné (fine-tuning)  
-  → objectif : mesurer l’impact du Transfer Learning sur la performance finale
+objectif : mesurer l’impact du Transfer Learning sur la performance finale
 
 ### • Méthodes utilisées :
 
-- Exploration & préparation des données  
+- Exploration et préparation des données  
 - Visualisation d’exemples CIFAR-10  
 - Normalisation des images  
 - Création de pipelines d’entraînement, validation et test
 
 ### • Modèle CNN (baseline)
 
-- Architecture personnalisée : **Conv2D → MaxPool → Dropout → Dense**  
+- Architecture personnalisée : **Conv2D -> MaxPool > Dropout -> Dense**  
 - Entraînement complet sur CIFAR-10  
 - Analyse des courbes d’apprentissage (accuracy / loss)  
 
-### Transfer Learning – EfficientNetB0
+### Transfer Learning - EfficientNetB0
 
 - Chargement d’un modèle pré-entraîné (**ImageNet**)  
 - Phase 1 : backbone gelé + classification head personnalisée  
