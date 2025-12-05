@@ -224,6 +224,33 @@ EfficientNetB0 montre une amélioration substantielle sur la précision, la robu
 
 ---
 
+### 7. [Analyse de l’Espérance de Vie (2000–2015)](https://github.com/Momo3972/analyse-esperance-de-vie)
+
+Analyse statistique complète des déterminants de l’espérance de vie mondiale (OMS), incluant une pipeline reproductible (Makefile), plusieurs modèles prédictifs et un rapport automatisé
+
+- **Stack** : R, tidyverse, ggplot2, glmnet, randomForest, corrplot, RMarkdown, Makefile  
+- **Objectif** : comprendre les facteurs influençant l’espérance de vie et comparer plusieurs modèles prédictifs (Régression linéaire, LASSO, Stepwise AIC, Random Forest)
+
+- **Méthodes utilisées** :  
+  - Nettoyage avancé des données (naniar, imputation médiane)  
+  - Analyse exploratoire : corrélogramme, histogrammes, scatterplots  
+  - Modélisation prédictive : LM, LASSO, Stepwise, Random Forest  
+  - Évaluation des modèles (RMSE, R²) et interprétation des variables importantes  
+  - Automatisation du workflow via Makefile → génération d’un rapport Word professionnel
+
+- **Principaux résultats** :  
+  - Random Forest = meilleur modèle (**R² ≈ 0.96**, RMSE Test ≈ **1.9**)  
+  - Variables déterminantes : `hiv_aids`, `adult_mortality`, `income_composition`, `schooling`  
+  - Forte influence des facteurs socio-économiques et sanitaires
+
+- **Livrables** :  
+  - Dataset propre + modèles sauvegardés  
+  - Figures (corrélogramme, importance des variables, comparaisons de modèles)  
+  - Rapport complet généré automatiquement : `rapport_final.docx`  
+  - Pipeline reproductible (Makefile et scripts)
+
+---
+
 ## Compétences techniques
 
 | Domaine | Compétences |
