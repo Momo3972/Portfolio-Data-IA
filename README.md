@@ -48,71 +48,39 @@ Je m’intéresse particulièrement à la création de pipelines de données rob
 
 ---
 
-## 2. [Classification d’Images CIFAR-10 (CNN et Transfer Learning EfficientNetB0)](https://github.com/Momo3972/deepvision-cifar10-classifier)
+## 2. [Classification d’Images CIFAR-10 (MLP, CNN et Transfer Learning EfficientNetB0)](https://github.com/Momo3972/deepvision-cifar10-classifier)
 
-> Développement d’un système complet de classification d’images basé sur le dataset CIFAR-10, incluant un modèle CNN construit from scratch et un modèle EfficientNetB0 utilisant du Transfer Learning  et du Fine-Tuning pour maximiser les performances
+Développement d’un système complet de classification d’images CIFAR-10 incluant un CNN construit from scratch et un modèle EfficientNetB0 utilisant le Transfer Learning, la Data Augmentation et un Fine-Tuning avancé. Création d’un pipeline reproductible + application Streamlit de démonstration.
 
-### • Stack :
-Python, TensorFlow / Keras, NumPy, Matplotlib, Scikit-learn, Google Colab
+### **Stack**
+Python, TensorFlow/Keras, NumPy, Scikit-learn, Matplotlib, Google Colab, Streamlit
 
-### • Objectif :
-Construire et comparer deux approches pour classifier les images CIFAR-10 :
+### **Objectif**
+Comparer deux approches d’apprentissage profond pour mesurer l’impact du Transfer Learning :
 
-- un modèle **CNN baseline** entièrement entraîné from scratch  
-- un modèle **EfficientNetB0 pré-entraîné sur ImageNet**, puis affiné (fine-tuning)  
-objectif : mesurer l’impact du Transfer Learning sur la performance finale
+- CNN baseline entraîné from scratch 
+- EfficientNetB0 pré-entraîné (ImageNet) et Fine-Tuning  
 
-### • Méthodes utilisées :
+Objectif : démontrer les gains en performance et en généralisation.
 
-- Exploration et préparation des données  
-- Visualisation d’exemples CIFAR-10  
-- Normalisation des images  
-- Création de pipelines d’entraînement, validation et test
+### **Méthodes utilisées**
+- Préparation des données : normalisation, split stratifié, Data Augmentation 
+- Entraînement ML : CNN custom (Conv2D → MaxPool → Dropout → BatchNorm)  
+- Transfer Learning : EfficientNetB0, fine-tuning progressif, callbacks (`EarlyStopping`, `ReduceLROnPlateau`)  
+- Analyse complète : courbes d’apprentissage, matrices de confusion, F1-scores par classe  
+- Validation robuste sur données jamais vues  
 
-### • Modèle CNN (baseline)
+### **Principaux résultats**
+- **CNN baseline** : accuracy ≈ **0.70**  
+- **EfficientNetB0** : accuracy ≈ **0.93**, loss ≈ **0.16**, **gain +0.23** en accuracy  
+- Forte amélioration sur les classes complexes grâce au fine-tuning + Data Augmentation  
 
-- Architecture personnalisée : **Conv2D -> MaxPool > Dropout -> Dense**  
-- Entraînement complet sur CIFAR-10  
-- Analyse des courbes d’apprentissage (accuracy / loss)  
-
-### Transfer Learning - EfficientNetB0
-
-- Chargement d’un modèle pré-entraîné (**ImageNet**)  
-- Phase 1 : backbone gelé + classification head personnalisée  
-- Phase 2 : **fine-tuning** complet  
-- Suivi des performances sur les **2 phases concaténées**
-
-### Évaluation
-
-- Rapport complet : précision, rappel, f1-score  
-- Matrice de confusion détaillée  
-- Comparaison finale **CNN vs EfficientNetB0**  
-- Analyse du gain absolu d’accuracy sur le test set  
-
-### Résultat
-#### CNN baseline :
-- **Test accuracy ≈ 0.70**  
-- **Test loss ≈ 0.86**
-#### EfficientNetB0 (Transfer Learning) :
-- **Test accuracy ≈ 0.95**  
-- **Test loss ≈ 0.16**  
-- **Gain absolu ≈ +0.24 en accuracy**
-
-EfficientNetB0 surclasse nettement le CNN baseline sur toutes les classes, confirmé par les matrices de confusion et les scores F1.
-
-### • Livrables :
-
-- Notebook complet : `01_cifar10_cnn.ipynb`  
-- Modèles entraînés :  
-  - `cnn_baseline_cifar10.h5`  
-  - `efficientnetb0_tl_cifar10.h5`  
-- Rapport automatisé PDF / README du projet  
-- Visualisations : courbes d’apprentissage, matrices de confusion
-
-### Résumé
-
-Ce projet démontre l’intérêt du **Transfer Learning** en vision par ordinateur et met en évidence l’écart de performance entre un CNN traditionnel et un modèle moderne pré-entraîné.  
-EfficientNetB0 montre une amélioration substantielle sur la précision, la robustesse et la généralisation.
+### **Livrables**
+- Modèle final : `best_model_efficientnet_aug.h5`  
+- Notebook complet : `Projet_Vision_CIFAR10.ipynb`  
+- Application Streamlit : `app.py`  
+- Courbes d’apprentissage + matrices de confusion  
+- Environnement reproductible (`requirements.txt`) + README documenté  
 
 ---
 
@@ -142,15 +110,15 @@ EfficientNetB0 montre une amélioration substantielle sur la précision, la robu
 > Analyse et modélisation de transactions bancaires pour identifier des signaux faibles de fraude dans un contexte de données fortement déséquilibrées
 
 - **Stack** : Python, Pandas, NumPy, Scikit-learn, XGBoost  
-- **Objectif** : améliorer le **rappel** de la classe frauduleuse sans dégrader la **précision**, dans un dataset où les fraudes représentent <1 % des transactions  
+- **Objectif** : améliorer le rappel de la classe frauduleuse sans dégrader la précision, dans un dataset où les fraudes représentent <1 % des transactions  
 - **Méthodes utilisées** :  
   - Analyse exploratoire (EDA) des variables financières et temporelles  
   - Préparation des données : nettoyage, encodage, feature engineering  
-  - Gestion du déséquilibre via **SMOTE**  
-  - Entraînement et optimisation de modèles : **Régression Logistique**, **Random Forest**, **XGBoost**  
+  - Gestion du déséquilibre via SMOTE  
+  - Entraînement et optimisation de modèles : Régression Logistique, Random Forest, XGBoost 
   - Évaluation avancée : F1-score, AUC-ROC, courbes précision-rappel, matrice de confusion  
   - Sélection du meilleur modèle basé sur sa capacité à détecter les fraudes rares  
-- **Résultat** : amélioration du **F1-score** et meilleure détection des transactions frauduleuses minoritaires  
+- **Résultat** : amélioration du F1-score et meilleure détection des transactions frauduleuses minoritaires  
 - **Livrables** :  
   - Notebook complet `fraude_detection.ipynb`  
   - Visualisations : matrices de confusion, ROC/PR curves, importances des features (`reports/figures/`)  
@@ -173,8 +141,8 @@ EfficientNetB0 montre une amélioration substantielle sur la précision, la robu
 
 - **Méthodes utilisées** :
   - Analyse des besoins métier et identification des indicateurs clés (KPI)
-  - Nettoyage, transformation et modélisation des données via **Power Query**
-  - Modélisation en étoile (**tables de faits et dimensions**)
+  - Nettoyage, transformation et modélisation des données via Power Query
+  - Modélisation en étoile (tables de faits et dimensions)
   - Création de mesures DAX : Total Ventes, Total Profit, Quantité vendue, Marge
   - Visualisations avancées :
     - Graphique temporel des ventes (année / mois)
@@ -185,7 +153,7 @@ EfficientNetB0 montre une amélioration substantielle sur la précision, la robu
   - Page “À propos” documentant la démarche analytique
 
 - **Livrables** :
-  - Tableau de bord Power BI complet : **analyse des performances commerciales**
+  - Tableau de bord Power BI complet : analyse des performances commerciales
   - Visualisations interactives + filtres dynamiques + infobulle contextualisée
   - Documentation claire (README + page dédiée dans Power BI)
 
@@ -201,9 +169,9 @@ EfficientNetB0 montre une amélioration substantielle sur la précision, la robu
   - Analyse exploratoire (EDA) géologique
   - Préparation des données & encodage des variables catégorielles
   - Entraînement et optimisation d’un modèle (GridSearchCV)
-  - Comparaison de trois modèles : **Logistic Regression**, **Random Forest optimisé**, **XGBoost optimisé**
+  - Comparaison de trois modèles : Logistic Regression, Random Forest optimisé, XGBoost optimisé
   - Évaluation approfondie (Accuracy, Recall, Precision, F1, ROC-AUC)
-  - Interprétabilité avancée avec **SHAP** :
+  - Interprétabilité avancée avec SHAP :
     - Summary Plot (vue globale des variables)
     - Force Plot (explication locale d’une observation)
     - Bar Plot (importance moyenne des features)
@@ -217,7 +185,7 @@ EfficientNetB0 montre une amélioration substantielle sur la précision, la robu
     - **Distance aux champs existants**
   - L’analyse SHAP confirme que le modèle prend des décisions **géologiquement cohérentes**
 - **Livrables** :
-  - Notebook complet d'analyse & modélisation (`oil-prediction.ipynb`)
+  - Notebook complet d'analyse et modélisation (`oil-prediction.ipynb`)
   - Modèle optimisé exporté : `best_random_forest_oil_reservoir.joblib`
   - Visualisations : matrice de confusion, ROC curve, summary SHAP, force plot, barplot SHAP
   - README complet documentant la démarche scientifique et géologique
@@ -257,7 +225,7 @@ Analyse statistique complète des déterminants de l’espérance de vie mondial
 |----------|-------------|
 | **Langages** | Python, SQL, R, Excel |
 | **Machine Learning** | Scikit-learn, XGBoost, PCA, SMOTE |
-| **Deep Learning / Computer vision** | CNN, Transfer Learning, EfficientNet, Python, TensorFlow/Keras, NumPy, Matplotlib, Scikit-learn, Google Colab |
+| **Deep Learning / Computer vision** | MLP, CNN, Transfer Learning, EfficientNet, Python, TensorFlow/Keras, NumPy, Matplotlib, Scikit-learn, Google Colab |
 | **Visualisation** | Power BI, Tableau, Plotly, Matplotlib, Seaborn |
 | **Base de données** | MySQL, MongoDB |
 | **Cloud / Big Data** | Google Cloud Platform (GCP), Snowflake, Databricks |
@@ -308,8 +276,7 @@ Lecture technique & IA | Football | Cuisine | Poésie
 
 ## Me retrouver
 - **Portfolio en ligne** -> [momo3972.github.io/Portfolio-Data-IA](https://momo3972.github.io/Portfolio-Data-IA/)
-- **GitHub** -> [github.com/Momo3972](https://github.com/Momo3972)
-- **LinkedIn** -> [https://linkedin.com/in/mohamed-lamineould-bouya-ab465211b/](https://linkedin.com/in/mohamed-lamineould-bouya-ab465211b)  
+- **GitHub** -> [github.com/Momo3972](https://github.com/Momo3972) 
 
 ---
 
