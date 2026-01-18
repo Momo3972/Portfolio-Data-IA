@@ -74,7 +74,7 @@ Je m’intéresse particulièrement à la création de pipelines de données rob
 
 ---
 
-## 3. [Classification d’Images CIFAR-10 (MLP, CNN et Transfer Learning EfficientNetB0)](https://github.com/Momo3972/deepvision-cifar10-classifier)
+### 3. [Classification d’Images CIFAR-10 (MLP, CNN et Transfer Learning EfficientNetB0)](https://github.com/Momo3972/deepvision-cifar10-classifier)
 
 Développement d’un système complet de classification d’images CIFAR-10 incluant un CNN construit from scratch et un modèle EfficientNetB0 utilisant le Transfer Learning, la Data Augmentation et un Fine-Tuning avancé. Création d’un pipeline reproductible + application Streamlit de démonstration.
 
