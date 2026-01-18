@@ -20,7 +20,33 @@ Je m’intéresse particulièrement à la création de pipelines de données rob
 
 ## Projets phares
 
-### 1. [Everflow API Analytics](https://github.com/Momo3972/Everflow-API-Analytics)
+---
+
+### 1. [Credit Default MLOps Pipeline](https://github.com/Momo3972/credit-default-mlops-pipeline)
+
+> Développement d’un pipeline MLOps end-to-end production-ready pour la prédiction du défaut de paiement, intégrant l’entraînement du modèle, le versioning MLflow, le déploiement API et le monitoring temps réel.
+
+- **Stack** : Python, FastAPI, Scikit-learn, MLflow, Docker, Docker Compose, MinIO (S3), PostgreSQL, Prometheus, Grafana, Linux, WSL2 (Ubuntu), Machine virtuelle
+- **Objectif** : Pipeline MLOps de bout en bout pour la prédiction du défaut de paiement : entraînement, tracking MLflow, API FastAPI, services Dockerisés, CI/CD et monitoring en production
+- **Méthodes utilisées** :
+  - Entraînement et évaluation du modèle de scoring crédit
+  - Tracking des expériences et versioning via MLflow Tracking ET Model Registry
+  - Promotion du modèle en Production via alias MLflow
+  - Déploiement du modèle via API FastAPI containerisée
+  - Exposition des métriques applicatives avec Prometheus
+  - Visualisation et observabilité via dashboards Grafana auto-provisionnés
+  - Orchestration complète de l’infrastructure avec Docker Compose
+  - Pipeline 100 % reproductible (infra, ML, serving, monitoring)
+- **Livrables** :
+  - API FastAPI de scoring crédit (/predict, /health, /meta)
+  - Modèle versionné et traçable dans MLflow
+  - Stack Docker complète : MLflow, MinIO, PostgreSQL, API, Prometheus, Grafana
+  - Dashboards Grafana prêts à l’emploi
+  - Documentation technique : architecture, monitoring, runbook et checklist de démo reproductible
+
+---
+
+### 2. [Everflow API Analytics](https://github.com/Momo3972/Everflow-API-Analytics)
 
 > Développement d’un mini-système analytique pour visualiser la performance marketing via l’API Everflow, incluant l’extraction de données, le calcul de métriques clés (profit), et la génération automatique de graphiques et d’un rapport Markdown.
 
@@ -48,7 +74,7 @@ Je m’intéresse particulièrement à la création de pipelines de données rob
 
 ---
 
-## 2. [Classification d’Images CIFAR-10 (MLP, CNN et Transfer Learning EfficientNetB0)](https://github.com/Momo3972/deepvision-cifar10-classifier)
+## 3. [Classification d’Images CIFAR-10 (MLP, CNN et Transfer Learning EfficientNetB0)](https://github.com/Momo3972/deepvision-cifar10-classifier)
 
 Développement d’un système complet de classification d’images CIFAR-10 incluant un CNN construit from scratch et un modèle EfficientNetB0 utilisant le Transfer Learning, la Data Augmentation et un Fine-Tuning avancé. Création d’un pipeline reproductible + application Streamlit de démonstration.
 
@@ -84,7 +110,7 @@ Objectif : démontrer les gains en performance et en généralisation.
 
 ---
 
-### 3. [Chatbot RAG IA Générative](https://github.com/Momo3972/chatbot-rag-ia-gen)
+### 4. [Chatbot RAG IA Générative](https://github.com/Momo3972/chatbot-rag-ia-gen)
 
 > Développement d’un chatbot IA utilisant une architecture RAG et une interface Web, permettant d’interroger dynamiquement une base documentaire PDF et d’obtenir des réponses contextualisées
 
@@ -105,7 +131,7 @@ Objectif : démontrer les gains en performance et en généralisation.
 
 ---
 
-### 4. [Détection de fraude bancaire](https://github.com/Momo3972/projet-fraude)
+### 5. [Détection de fraude bancaire](https://github.com/Momo3972/projet-fraude)
 
 > Analyse et modélisation de transactions bancaires pour identifier des signaux faibles de fraude dans un contexte de données fortement déséquilibrées
 
@@ -128,7 +154,7 @@ Objectif : démontrer les gains en performance et en généralisation.
 
 ---
 
-### 5. [Dashboard Power BI - Analyse de la performance commerciale](https://github.com/Momo3972/projet-powerbi-superstore)
+### 6. [Dashboard Power BI - Analyse de la performance commerciale](https://github.com/Momo3972/projet-powerbi-superstore)
 
 > Création d’un tableau de bord interactif pour analyser les ventes, profits et performances commerciales du dataset Global Superstore
 
@@ -159,7 +185,7 @@ Objectif : démontrer les gains en performance et en généralisation.
 
 ---
 
-### 6. [Prédiction de la présence d'un réservoir pétrolier](https://github.com/Momo3972/oil-reservoir-prediction-ml)
+### 7. [Prédiction de la présence d'un réservoir pétrolier](https://github.com/Momo3972/oil-reservoir-prediction-ml)
 
 > Prédiction de la présence d’un réservoir pétrolier à partir de données géologiques et sismiques simulées - avec analyse d’interprétabilité SHAP pour valider la cohérence géologique
 
@@ -192,7 +218,7 @@ Objectif : démontrer les gains en performance et en généralisation.
 
 ---
 
-### 7. [Analyse de l’Espérance de Vie (2000–2015)](https://github.com/Momo3972/analyse-esperance-de-vie)
+### 8. [Analyse de l’Espérance de Vie (2000–2015)](https://github.com/Momo3972/analyse-esperance-de-vie)
 
 Analyse statistique complète des déterminants de l’espérance de vie mondiale (OMS), incluant une pipeline reproductible (Makefile), plusieurs modèles prédictifs et un rapport automatisé
 
@@ -229,7 +255,7 @@ Analyse statistique complète des déterminants de l’espérance de vie mondial
 | **Visualisation** | Power BI, Tableau, Plotly, Matplotlib, Seaborn |
 | **Base de données** | MySQL, MongoDB |
 | **Cloud / Big Data** | Google Cloud Platform (GCP), Snowflake, Databricks |
-| **Data Engineering** | ETL, pipelines, ingestion multi-source, EDA, data quality |
+| **Data Engineering** | ETL, Pipelines, MLflow, Docker, Docker Compose, MinIO (S3), PostgreSQL, Prometheus, Grafana, Linux, WSL2 (Ubuntu), Machine virtuelle, ingestion multi-source, EDA, data quality |
 | **Outils / Méthodo** | Git, VS Code, Jupyter, tests unitaires, documentation |
 
 ---
