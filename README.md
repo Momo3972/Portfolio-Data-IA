@@ -154,7 +154,7 @@ Objectif : démontrer les gains en performance et en généralisation.
 
 ---
 
-### 6. [Dashboard Power BI - Analyse de la performance commerciale](https://github.com/Momo3972/projet-powerbi-superstore)
+### 6. [Dashboard Power BI - Analyse de la performance commerciale](https://github.com/Momo3972/powerbi-global-superstore-dashboard)
 
 > Création d’un tableau de bord interactif pour analyser les ventes, profits et performances commerciales du dataset Global Superstore
 
