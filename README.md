@@ -1,12 +1,12 @@
 # Mohamed Lamine OULD BOUYA  
-**Data Scientist · Data Engineer · Data Analyst · IA**
+**Data Scientist - Data Engineer - Data Analyst - IA**
 
 > Je conçois des solutions data robustes, explicables et utiles : de l’ingestion à la mise en production, en passant par la modélisation ML/IA et la data visualisation.
 
 Rueil-Malmaison  
 ouldbouya.mohamedlamine@gmail.com  
 +33 7 60 15 54 08  
-Objectif : **stage de fin d’études (6 mois)** à partir de début janvier 2026  
+Objectif : **stage de fin d’études (6 mois)** dès que possible pour un début au plus tard le 10 mars 2026  
 Intérêts : Machine Learning - Data visulisation - IA générative - Qualité des données - Deep learning - Cloud - ETL
 
 ---
@@ -22,59 +22,7 @@ Je m’intéresse particulièrement à la création de pipelines de données rob
 
 ---
 
-### 1. [Credit Default MLOps Pipeline](https://github.com/Momo3972/credit-default-mlops-pipeline)
-
-> Développement d’un pipeline MLOps end-to-end production-ready pour la prédiction du défaut de paiement, intégrant l’entraînement du modèle, le versioning MLflow, le déploiement API et le monitoring temps réel.
-
-- **Stack** : Python, FastAPI, Scikit-learn, MLflow, Docker, Docker Compose, MinIO (S3), PostgreSQL, Prometheus, Grafana, Linux, WSL2 (Ubuntu), Machine virtuelle
-- **Objectif** : Pipeline MLOps de bout en bout pour la prédiction du défaut de paiement : entraînement, tracking MLflow, API FastAPI, services Dockerisés, CI/CD et monitoring en production
-- **Méthodes utilisées** :
-  - Entraînement et évaluation du modèle de scoring crédit
-  - Tracking des expériences et versioning via MLflow Tracking ET Model Registry
-  - Promotion du modèle en Production via alias MLflow
-  - Déploiement du modèle via API FastAPI containerisée
-  - Exposition des métriques applicatives avec Prometheus
-  - Visualisation et observabilité via dashboards Grafana auto-provisionnés
-  - Orchestration complète de l’infrastructure avec Docker Compose
-  - Pipeline 100 % reproductible (infra, ML, serving, monitoring)
-- **Livrables** :
-  - API FastAPI de scoring crédit (/predict, /health, /meta)
-  - Modèle versionné et traçable dans MLflow
-  - Stack Docker complète : MLflow, MinIO, PostgreSQL, API, Prometheus, Grafana
-  - Dashboards Grafana prêts à l’emploi
-  - Documentation technique : architecture, monitoring, runbook et checklist de démo reproductible
-
----
-
-### 2. [Everflow API Analytics](https://github.com/Momo3972/Everflow-API-Analytics)
-
-> Développement d’un mini-système analytique pour visualiser la performance marketing via l’API Everflow, incluant l’extraction de données, le calcul de métriques clés (profit), et la génération automatique de graphiques et d’un rapport Markdown.
-
-- **Stack** : Python, Pandas, Matplotlib, Requests, Everflow API
-
-- **Méthodes utilisées** :
-  - Connexion sécurisée à l’API Everflow (authentification via clé API)
-  - Extraction et transformation de statistiques agrégées (offres, affiliés, annonceurs)
-  - Calcul du profit (revenue - payout)
-  - Génération automatique de graphiques analytiques
-  - Export automatique d’un rapport Markdown
-  - Structuration modulaire : `src/`, `mock_data/`, `out/`
-
-- **Livrables** :
-  - Notebook complet : *Everflow-API-Analytics.ipynb*
-  - Rapport Markdown généré automatiquement
-  - Fichiers de sortie dans `out/` :
-    - profits par offre
-    - profits par affilié
-    - profits par annonceur
-    - rapport global (*REPORT*)
-
-- **Résultat** :
-  Déploiement d’un mini-dashboard analytique automatisé permettant une visualisation rapide et exploitable des performances marketing via l’API Everflow.
-
----
-
-### 3. [Classification d’Images CIFAR-10 (MLP, CNN et Transfer Learning EfficientNetB0)](https://github.com/Momo3972/deepvision-cifar10-classifier)
+### 1. [Classification d’Images CIFAR-10 (MLP, CNN et Transfer Learning EfficientNetB0)](https://github.com/Momo3972/deepvision-cifar10-classifier)
 
 Développement d’un système complet de classification d’images CIFAR-10 incluant un CNN construit from scratch et un modèle EfficientNetB0 utilisant le Transfer Learning, la Data Augmentation et un Fine-Tuning avancé. Création d’un pipeline reproductible + application Streamlit de démonstration.
 
@@ -110,9 +58,88 @@ Objectif : démontrer les gains en performance et en généralisation.
 
 ---
 
-### 4. [Chatbot RAG IA Générative](https://github.com/Momo3972/chatbot-rag-ia-gen)
+### 2. [Credit Default MLOps Pipeline](https://github.com/Momo3972/credit-default-mlops-pipeline)
 
-> Développement d’un chatbot IA utilisant une architecture RAG et une interface Web, permettant d’interroger dynamiquement une base documentaire PDF et d’obtenir des réponses contextualisées
+Développement d’un pipeline MLOps end-to-end production-ready pour la prédiction du défaut de paiement, intégrant l’entraînement du modèle, le versioning MLflow, le déploiement API et le monitoring temps réel.
+
+- **Stack** : Python, FastAPI, Scikit-learn, MLflow, Docker, Docker Compose, MinIO (S3), PostgreSQL, Prometheus, Grafana, Linux, WSL2 (Ubuntu), Machine virtuelle
+- **Objectif** : Pipeline MLOps de bout en bout pour la prédiction du défaut de paiement : entraînement, tracking MLflow, API FastAPI, services Dockerisés, CI/CD et monitoring en production
+- **Méthodes utilisées** :
+  - Entraînement et évaluation du modèle de scoring crédit
+  - Tracking des expériences et versioning via MLflow Tracking ET Model Registry
+  - Promotion du modèle en Production via alias MLflow
+  - Déploiement du modèle via API FastAPI containerisée
+  - Exposition des métriques applicatives avec Prometheus
+  - Visualisation et observabilité via dashboards Grafana auto-provisionnés
+  - Orchestration complète de l’infrastructure avec Docker Compose
+  - Pipeline 100 % reproductible (infra, ML, serving, monitoring)
+- **Livrables** :
+  - API FastAPI de scoring crédit (/predict, /health, /meta)
+  - Modèle versionné et traçable dans MLflow
+  - Stack Docker complète : MLflow, MinIO, PostgreSQL, API, Prometheus, Grafana
+  - Dashboards Grafana prêts à l’emploi
+  - Documentation technique : architecture, monitoring, runbook et checklist de démo reproductible
+
+---
+
+### 3. [Everflow API Analytics](https://github.com/Momo3972/Everflow-API-Analytics)
+
+Développement d’un mini-système analytique pour visualiser la performance marketing via l’API Everflow, incluant l’extraction de données, le calcul de métriques clés (profit), et la génération automatique de graphiques et d’un rapport Markdown.
+
+- **Stack** : Python, Pandas, Matplotlib, Requests, Everflow API
+
+- **Méthodes utilisées** :
+  - Connexion sécurisée à l’API Everflow (authentification via clé API)
+  - Extraction et transformation de statistiques agrégées (offres, affiliés, annonceurs)
+  - Calcul du profit (revenue - payout)
+  - Génération automatique de graphiques analytiques
+  - Export automatique d’un rapport Markdown
+  - Structuration modulaire : `src/`, `mock_data/`, `out/`
+
+- **Livrables** :
+  - Notebook complet : *Everflow-API-Analytics.ipynb*
+  - Rapport Markdown généré automatiquement
+  - Fichiers de sortie dans `out/` :
+    - profits par offre
+    - profits par affilié
+    - profits par annonceur
+    - rapport global (*REPORT*)
+
+- **Résultat** :
+  Déploiement d’un mini-dashboard analytique automatisé permettant une visualisation rapide et exploitable des performances marketing via l’API Everflow.
+
+---
+
+### 4. [NOAA Weather - Industrial End-to-End MLOps Pipeline](https://github.com/Momo3972/noaa-weather-mlops-pipeline)
+
+Conception et déploiement d’un pipeline MLOps industriel end-to-end pour la prévision de températures à partir de données NOAA, couvrant l’ingestion automatisée, l’entraînement supervisé, la gouvernance des modèles, le déploiement API et le monitoring de la dérive des données.
+
+- **Stack** : Python, Scikit-learn, FastAPI, MLflow (Tracking et Model Registry), Apache Airflow, EvidentlyAI, Docker, Docker Compose, GitHub Actions, Linux, WSL2
+- **Objectif** : Mettre en place une infrastructure MLOps complète et automatisée, reproduisant un workflow industriel réel : orchestration des pipelines ML, gestion du cycle de vie des modèles, déploiement en production et observabilité continue des données
+- **Méthodes utilisées** :
+  - Ingestion et préparation automatisées des données météorologiques NOAA
+  - Feature engineering et entraînement d’un modèle de régression Random Forest
+  - Tracking des expériences, métriques et artefacts via MLflow
+  - Gouvernance des modèles avec MLflow Model Registry
+  - Promotion automatique du modèle en Production via alias MLflow
+  - Déploiement du modèle via une API FastAPI containerisée
+  - Orchestration des workflows de réentraînement avec Apache Airflow
+  - Détection et analyse de la dérive des données avec EvidentlyAI
+  - CI/CD automatisé (tests, linting, build et déploiement Docker)
+  - Stack entièrement Dockerisée et reproductible
+- **Livrables** :
+  - API FastAPI de prédiction des températures (`/predict`, `/health`)
+  - Modèles versionnés, traçables et promus dans MLflow
+  - DAG Airflow de réentraînement planifié
+  - Rapports de data drift générés automatiquement
+  - Stack multi-conteneurs opérationnelle (MLflow, Airflow, API, monitoring)
+  - Documentation complète et preuves d’exécution (CI/CD, orchestration, monitoring)
+
+---
+
+### 5. [Chatbot RAG IA Générative](https://github.com/Momo3972/chatbot-rag-ia-gen)
+
+Développement d’un chatbot IA utilisant une architecture RAG et une interface Web, permettant d’interroger dynamiquement une base documentaire PDF et d’obtenir des réponses contextualisées
 
 - **Stack** : Python, LLM (LangChain / OpenAI), RAG, Gradio / Streamlit  
 
@@ -131,9 +158,9 @@ Objectif : démontrer les gains en performance et en généralisation.
 
 ---
 
-### 5. [Détection de fraude bancaire](https://github.com/Momo3972/projet-fraude)
+### 6. [Détection de fraude bancaire](https://github.com/Momo3972/projet-fraude)
 
-> Analyse et modélisation de transactions bancaires pour identifier des signaux faibles de fraude dans un contexte de données fortement déséquilibrées
+Analyse et modélisation de transactions bancaires pour identifier des signaux faibles de fraude dans un contexte de données fortement déséquilibrées
 
 - **Stack** : Python, Pandas, NumPy, Scikit-learn, XGBoost  
 - **Objectif** : améliorer le rappel de la classe frauduleuse sans dégrader la précision, dans un dataset où les fraudes représentent <1 % des transactions  
@@ -154,9 +181,9 @@ Objectif : démontrer les gains en performance et en généralisation.
 
 ---
 
-### 6. [Dashboard Power BI - Analyse de la performance commerciale](https://github.com/Momo3972/powerbi-global-superstore-dashboard)
+### 7. [Dashboard Power BI - Analyse de la performance commerciale](https://github.com/Momo3972/powerbi-global-superstore-dashboard)
 
-> Création d’un tableau de bord interactif pour analyser les ventes, profits et performances commerciales du dataset Global Superstore
+Création d’un tableau de bord interactif pour analyser les ventes, profits et performances commerciales du dataset Global Superstore
 
 - **Stack** : Power BI Desktop, Power Query, DAX, Excel  
 - **Objectif** : fournir un tableau de bord professionnel permettant :
@@ -185,9 +212,9 @@ Objectif : démontrer les gains en performance et en généralisation.
 
 ---
 
-### 7. [Prédiction de la présence d'un réservoir pétrolier](https://github.com/Momo3972/oil-reservoir-prediction-ml)
+### 8. [Prédiction de la présence d'un réservoir pétrolier](https://github.com/Momo3972/oil-reservoir-prediction-ml)
 
-> Prédiction de la présence d’un réservoir pétrolier à partir de données géologiques et sismiques simulées - avec analyse d’interprétabilité SHAP pour valider la cohérence géologique
+Prédiction de la présence d’un réservoir pétrolier à partir de données géologiques et sismiques simulées - avec analyse d’interprétabilité SHAP pour valider la cohérence géologique
 
 - **Stack** : Python, Pandas, NumPy, Scikit-learn, Random Forest, XGBoost, Matplotlib, SHAP
 - **Objectif** : prédire la présence d’hydrocarbures avant forage, en exploitant des caractéristiques géologiques (porosité, type de roche, piège, profondeur, distance aux champs existants, signature sismique)
@@ -218,7 +245,7 @@ Objectif : démontrer les gains en performance et en généralisation.
 
 ---
 
-### 8. [Analyse de l’Espérance de Vie (2000–2015)](https://github.com/Momo3972/analyse-esperance-de-vie)
+### 9. [Analyse de l’Espérance de Vie (2000–2015)](https://github.com/Momo3972/analyse-esperance-de-vie)
 
 Analyse statistique complète des déterminants de l’espérance de vie mondiale (OMS), incluant une pipeline reproductible (Makefile), plusieurs modèles prédictifs et un rapport automatisé
 
@@ -255,7 +282,7 @@ Analyse statistique complète des déterminants de l’espérance de vie mondial
 | **Visualisation** | Power BI, Tableau, Plotly, Matplotlib, Seaborn |
 | **Base de données** | MySQL, MongoDB |
 | **Cloud / Big Data** | Google Cloud Platform (GCP), Snowflake, Databricks |
-| **Data Engineering** | ETL, Pipelines, MLflow, Docker, Docker Compose, MinIO (S3), PostgreSQL, Prometheus, Grafana, Linux, WSL2 (Ubuntu), Machine virtuelle, ingestion multi-source, EDA, data quality |
+| **Data Engineering** | ETL, Pipelines, FastAPI, MLflow (Tracking et Model Registry), Apache Airflow, EvidentlyAI, GitHub Actions, Docker, Docker Compose, MinIO (S3), PostgreSQL, Prometheus, Grafana, Linux, WSL2 (Ubuntu), Machine virtuelle, ingestion multi-source, EDA, data quality |
 | **Outils / Méthodo** | Git, VS Code, Jupyter, tests unitaires, documentation |
 
 ---
@@ -306,4 +333,4 @@ Lecture technique & IA | Football | Cuisine | Poésie
 
 ---
 
-> *Je cherche à rejoindre une équipe data ambitieuse pour transformer les données en valeur métier réelle, en combinant rigueur analytique, esprit d’ingénierie et créativité IA.*
+*Je cherche à rejoindre une équipe data ambitieuse pour transformer les données en valeur métier réelle, en combinant rigueur analytique, esprit d’ingénierie et créativité IA.*
