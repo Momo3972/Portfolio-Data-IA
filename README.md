@@ -112,28 +112,31 @@ Développement d’un mini-système analytique pour visualiser la performance ma
 
 ### 4. [NOAA Weather - Industrial End-to-End MLOps Pipeline](https://github.com/Momo3972/noaa-weather-mlops-pipeline)
 
-Conception et déploiement d’un pipeline MLOps industriel end-to-end pour la prévision de températures à partir de données NOAA, couvrant l’ingestion automatisée, l’entraînement supervisé, la gouvernance des modèles, le déploiement API et le monitoring de la dérive des données.
+Conception et déploiement d’un pipeline MLOps industriel end-to-end pour la prévision de températures, couvrant l’ingestion automatisée, l’entraînement supervisé, la gouvernance des modèles, le déploiement API et le monitoring de la dérive des données.
 
 - **Stack** : Python, Scikit-learn, FastAPI, MLflow (Tracking et Model Registry), Apache Airflow, EvidentlyAI, Docker, Docker Compose, GitHub Actions, Linux, WSL2
-- **Objectif** : Mettre en place une infrastructure MLOps complète et automatisée, reproduisant un workflow industriel réel : orchestration des pipelines ML, gestion du cycle de vie des modèles, déploiement en production et observabilité continue des données
+- **Objectif** : Reproduire un workflow MLOps industriel complet et automatisé : orchestration des pipelines ML, gestion du cycle de vie des modèles avec quality gate, déploiement en production et observabilité continue des données
 - **Méthodes utilisées** :
-  - Ingestion et préparation automatisées des données météorologiques NOAA
-  - Feature engineering et entraînement d’un modèle de régression Random Forest
-  - Tracking des expériences, métriques et artefacts via MLflow
-  - Gouvernance des modèles avec MLflow Model Registry
-  - Promotion automatique du modèle en Production via alias MLflow
-  - Déploiement du modèle via une API FastAPI containerisée
-  - Orchestration des workflows de réentraînement avec Apache Airflow
-  - Détection et analyse de la dérive des données avec EvidentlyAI
-  - CI/CD automatisé (tests, linting, build et déploiement Docker)
-  - Stack entièrement Dockerisée et reproductible
+  - DAG Airflow en 5 étapes planifiées : ingestion -> validation -> entraînement > promotion -> monitoring
+  - Feature engineering temporel : variables de lag, statistiques glissantes, encodage de saisonnalité
+  - Entraînement d’un Random Forest Regressor avec split temporel 80/20
+  - Tracking des expériences, métriques (RMSE, MAE, R²) et artefacts via MLflow
+  - Quality gate RMSE ≤ 3,0 °C avant promotion automatique en `@production`
+  - Déploiement du modèle via API FastAPI containerisée (`POST /v1/predict`, `GET /health`)
+  - Détection de la dérive des données avec EvidentlyAI (DataDriftPreset, fenêtres 365 jours)
+  - CI/CD complet : pytest, Hadolint, build et push Docker automatisés (GitHub Actions)
+- **Principaux résultats** :
+  - Pipeline end-to-end opérationnel, reproductible et entièrement Dockerisé
+  - Modèle promu en `@production` avec RMSE < 3,0 °C sur données de test
+  - Image Docker pushée automatiquement sur Docker Hub à chaque commit sur `main`
+  - 11 captures d’exécution documentant l’ensemble du pipeline (Airflow, MLflow, FastAPI, EvidentlyAI)
 - **Livrables** :
-  - API FastAPI de prédiction des températures (`/predict`, `/health`)
-  - Modèles versionnés, traçables et promus dans MLflow
-  - DAG Airflow de réentraînement planifié
-  - Rapports de data drift générés automatiquement
-  - Stack multi-conteneurs opérationnelle (MLflow, Airflow, API, monitoring)
-  - Documentation complète et preuves d’exécution (CI/CD, orchestration, monitoring)
+  - API FastAPI de prédiction des températures (`POST /v1/predict`, `GET /health`)
+  - DAG Airflow de réentraînement planifié (`@daily`, 5 tâches)
+  - Modèles versionnés, traçables et promus via alias MLflow `@production`
+  - Rapports de data drift générés automatiquement (HTML + JSON)
+  - Stack multi-conteneurs opérationnelle (Airflow, MLflow, FastAPI, monitoring)
+  - Documentation complète : README bilingue, DEMO.md, 11 preuves d’exécution
 
 ---
 
