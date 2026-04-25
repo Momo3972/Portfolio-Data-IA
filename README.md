@@ -60,25 +60,32 @@ Objectif : démontrer les gains en performance et en généralisation.
 
 ### 2. [Credit Default MLOps Pipeline](https://github.com/Momo3972/credit-default-mlops-pipeline)
 
-Développement d’un pipeline MLOps end-to-end production-ready pour la prédiction du défaut de paiement, intégrant l’entraînement du modèle, le versioning MLflow, le déploiement API et le monitoring temps réel.
+Conception et déploiement d'un pipeline MLOps industriel end-to-end pour la prédiction du défaut de paiement, couvrant l'entraînement multi-algorithmes, le versioning des modèles, le déploiement API et le monitoring en production.
 
-- **Stack** : Python, FastAPI, Scikit-learn, MLflow, Docker, Docker Compose, MinIO (S3), PostgreSQL, Prometheus, Grafana, Linux, WSL2 (Ubuntu), Machine virtuelle
-- **Objectif** : Pipeline MLOps de bout en bout pour la prédiction du défaut de paiement : entraînement, tracking MLflow, API FastAPI, services Dockerisés, CI/CD et monitoring en production
+- **Stack** : Python, Scikit-learn, FastAPI, MLflow (Tracking et Model Registry), MinIO (S3), PostgreSQL,
+  Prometheus, Grafana, Docker, Docker Compose, GitHub Actions, Linux, WSL2
+- **Objectif** : Reproduire un workflow MLOps industriel complet : comparaison d'algorithmes, gouvernance
+  des modèles via MLflow Registry, serving API containerisé et observabilité temps réel
 - **Méthodes utilisées** :
-  - Entraînement et évaluation du modèle de scoring crédit
-  - Tracking des expériences et versioning via MLflow Tracking ET Model Registry
-  - Promotion du modèle en Production via alias MLflow
-  - Déploiement du modèle via API FastAPI containerisée
-  - Exposition des métriques applicatives avec Prometheus
-  - Visualisation et observabilité via dashboards Grafana auto-provisionnés
-  - Orchestration complète de l’infrastructure avec Docker Compose
-  - Pipeline 100 % reproductible (infra, ML, serving, monitoring)
+  - Comparaison de 3 algorithmes de classification (LogisticRegression, RandomForest, GradientBoosting)
+    sur le dataset *Give Me Some Credit* (Kaggle)
+  - Tracking des expériences, métriques (ROC AUC, Recall, F1) et artefacts via MLflow
+  - Promotion du meilleur modèle en `@production` via alias MLflow Model Registry
+  - Déploiement du modèle via API REST FastAPI documentée (Swagger)
+  - Seuil de décision optimisé (0.05) pour maximiser le recall — coût asymétrique FN >> FP
+  - Exposition des métriques applicatives avec Prometheus + dashboards Grafana auto-provisionnés
+  - Pipeline CI/CD : ruff, pytest, bandit, pip-audit, build Docker (GitHub Actions)
+- **Principaux résultats** :
+  - Gradient Boosting sélectionné : ROC AUC = 0.8672, Recall = 0.8374
+  - Pipeline reproductible, documenté et entièrement Dockerisé (6 services)
+  - CI vert en < 3 minutes sur chaque push
+  - 10 captures d'écran documentant l'ensemble du pipeline (MLflow, MinIO, Grafana, Swagger, CI)
 - **Livrables** :
-  - API FastAPI de scoring crédit (/predict, /health, /meta)
-  - Modèle versionné et traçable dans MLflow
+  - API FastAPI de scoring crédit (`POST /predict`, `GET /health`, `GET /meta`)
+  - Modèles versionnés, traçables et promus via alias MLflow `@production`
   - Stack Docker complète : MLflow, MinIO, PostgreSQL, API, Prometheus, Grafana
-  - Dashboards Grafana prêts à l’emploi
-  - Documentation technique : architecture, monitoring, runbook et checklist de démo reproductible
+  - Dashboards Grafana prêts à l'emploi avec alertes configurables
+  - Documentation complète : ARCHITECTURE.md, USAGE.md, DEMO_RAPIDE.md, checklist de démo reproductible
 
 ---
 
